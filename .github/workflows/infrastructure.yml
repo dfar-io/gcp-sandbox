@@ -1,0 +1,32 @@
+name: Apply Infrastructure Changes
+
+on:
+  workflow_dispatch:
+    inputs:
+      should-apply:
+        description: "Type 'yes' to apply changes found."
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.3.4
+      - name: terraform init
+        run: |
+          terraform init \
+            -backend-config="storage_account_name=${{ secrets.REMOTE_STATE_STORAGE_ACCOUNT_NAME }}" \
+            -backend-config="container_name=${{ secrets.REMOTE_STATE_CONTAINER_NAME }}" \
+            -backend-config="key=${{ secrets.REMOTE_STATE_KEY }}" \
+            -backend-config="access_key=${{ secrets.REMOTE_STATE_ACCESS_KEY }}" \
+      - name: terraform plan
+        run: terraform plan -out tfplan
+      - name: terraform apply
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.should-apply == 'yes' }}
+        run: terraform apply "tfplan"
+      
+    

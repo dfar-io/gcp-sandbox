@@ -36,6 +36,11 @@
                 "${workspaceFolder}/api/api.csproj"
             ],
             "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "npmStart",
+            "type": "shell",
+            "command": "npm --prefix ${workspaceFolder}/ui run start"
         }
     ]
 }

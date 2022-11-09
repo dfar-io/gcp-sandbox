@@ -10,9 +10,6 @@
 	// Fixes the 502 gateway error
 	// https://github.com/community/community/discussions/7116
 	"portsAttributes": {
-		"4200": {
-			"protocol": "https"
-		},
 		"7190": {
 			"protocol": "https"
 		}
@@ -25,7 +22,7 @@
 	//"forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm i @angular/cli -g"
+	"postCreateCommand": "npm i @angular/cli -g && ./installGCloudCLI.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},

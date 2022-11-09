@@ -1,3 +1,7 @@
+# infrastructure
+.terraform
+.terraform.lock.hcl
+
 # API
 api/bin
 api/obj
