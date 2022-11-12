@@ -16,18 +16,18 @@ jobs:
         uses: hashicorp/setup-terraform@v2
         with:
           terraform_version: 1.3.4
-      - name: 'Authenticate to Google Cloud'
-      - uses: 'google-github-actions/auth@v1'
-      - with:
+      - name: Authenticate to Google Cloud
+        uses: 'google-github-actions/auth@v1'
+        with:
           service_account: 'github-actions@gcp-sandbox-368017.iam.gserviceaccount.com'
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
-      - name: terraform init
+      - name: Initialize Terraform
         run: terraform init
         working-directory: infra
-      - name: terraform plan
+      - name: Run Terraform Plan
         run: terraform plan -out tfplan
         working-directory: infra
-      - name: terraform apply
+      - name: Apply Terraform Changes
         if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.should-apply == 'yes' }}
         run: terraform apply "tfplan"
         working-directory: infra
