@@ -45,3 +45,7 @@ To start the API, use the debugging mode (F5) in VSCode.
 To start the UI, go to the `ui` folder and run `ng serve`
 
 _(this isn't working yet, I think it has to do with port forwarding)_
+
+## Reference
+
+Auth to GCP in Github Actions - https://github.com/google-github-actions/auth#authenticating-via-service-account-key-json
