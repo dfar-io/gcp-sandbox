@@ -1,6 +1,11 @@
 # gcp-sandbox
 A sandbox for me to experiment working with GCP, including infrastructure with Terraform
 
+## Locations:
+
+* API: http://gcp.dfar.io
+* UI: TBD
+
 ## Getting Started
 
 Open the application in Github Codespaces. Some things to do:

@@ -17,6 +17,7 @@ jobs:
           node-version: 18
       - name: Download npm dependencies
         run: npm ci
+        working-directory: ui
       - name: Build
         run: ng build
         working-directory: ui
