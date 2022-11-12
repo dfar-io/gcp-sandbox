@@ -46,6 +46,14 @@ To start the UI, go to the `ui` folder and run `ng serve`
 
 _(this isn't working yet, I think it has to do with port forwarding)_
 
+## Troubleshooting
+
+For `terraform init`
+
+```
+Error: Failed to get existing workspaces: querying Cloud Storage failed: Get "https://storage.googleapis.com/storage/v1/b/gcp-sandbox-terraform-state-bucket/o?alt=json&delimiter=%2F&pageToken=&prefix=terraform%2Fstate%2F&prettyPrint=false&projection=full&versions=false": private key should be a PEM or plain PKCS1 or PKCS8; parse error: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2
+```
+
 ## Reference
 
 Auth to GCP in Github Actions - https://github.com/google-github-actions/auth#authenticating-via-service-account-key-json
