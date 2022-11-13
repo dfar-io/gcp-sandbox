@@ -54,6 +54,8 @@ For `terraform init`
 Error: Failed to get existing workspaces: querying Cloud Storage failed: Get "https://storage.googleapis.com/storage/v1/b/gcp-sandbox-terraform-state-bucket/o?alt=json&delimiter=%2F&pageToken=&prefix=terraform%2Fstate%2F&prettyPrint=false&projection=full&versions=false": private key should be a PEM or plain PKCS1 or PKCS8; parse error: asn1: structure error: tags don't match (16 vs {class:0 tag:13 length:45 isCompound:true}) {optional:false explicit:false application:false private:false defaultValue:<nil> tag:<nil> stringType:0 timeType:0 set:false omitEmpty:false} pkcs1PrivateKey @2
 ```
 
+Follow these directions: https://github.com/google-github-actions/auth/blob/main/docs/TROUBLESHOOTING.md#aggressive--replacement-in-logs
+
 ## Reference
 
 Auth to GCP in Github Actions - https://github.com/google-github-actions/auth#authenticating-via-service-account-key-json
