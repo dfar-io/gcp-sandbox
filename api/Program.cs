@@ -21,12 +21,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-// Adds health endpoint
-app.MapGet("/", () =>
-{
-    return "working!";
-})
-.WithName("Health");
-
 app.Run();
