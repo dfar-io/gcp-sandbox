@@ -23,7 +23,7 @@ jobs:
       - name: Upload to App Engine
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
-          working_directory: 'api/bin/Release/net6.0'
+          working_directory: 'api/bin/Release/net6.0/publish'
   ui:
     runs-on: ubuntu-latest
     steps:
