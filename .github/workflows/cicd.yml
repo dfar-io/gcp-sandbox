@@ -34,4 +34,4 @@ jobs:
           parent: false
           # prevents caching of site through GCP
           headers: |-
-            'Cache-Control: no-cache, max-age=0'
+            cache-control: no-cache, max-age=0
