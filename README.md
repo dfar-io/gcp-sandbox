@@ -59,3 +59,5 @@ Follow these directions: https://github.com/google-github-actions/auth/blob/main
 ## Reference
 
 Auth to GCP in Github Actions - https://github.com/google-github-actions/auth#authenticating-via-service-account-key-json
+
+Fix .NET deploy issue - https://medium.com/google-cloud/how-to-deploy-asp-net-core-3-x-to-google-app-engine-8813b0ee3521

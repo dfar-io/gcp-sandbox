@@ -11,13 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="app.yaml" />
+    <None Include="app.yaml" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="Dockerfile" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="app.yaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
 </Project>
