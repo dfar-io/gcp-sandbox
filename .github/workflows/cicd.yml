@@ -20,11 +20,9 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}
+      # Let's start easy
       - name: Upload to App Engine
         uses: 'google-github-actions/deploy-appengine@v0'
-        with:
-          deliverables: app.yaml
-          working_directory: api/bin/Release/net6.0/publish
   ui:
     runs-on: ubuntu-latest
     steps:
