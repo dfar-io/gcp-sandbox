@@ -33,4 +33,5 @@ jobs:
           # places contents directly into bucket, instead of folder
           parent: false
           # prevents caching of site through GCP
-          headers: 'Cache-Control: no-cache, max-age=0'
+          headers: |-
+            Cache-Control: no-cache, max-age=0
