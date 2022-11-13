@@ -32,3 +32,6 @@ jobs:
           destination: 'gcp.dfar.io'
           # places contents directly into bucket, instead of folder
           parent: false
+          # prevents caching of site through GCP
+          headers: |-
+            Cache-Control: Cache-Control:no-cache, max-age=0
