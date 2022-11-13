@@ -19,7 +19,7 @@ jobs:
         run: npm ci
         working-directory: ui
       - name: Build
-        run: ng build
+        run: npm run ng build
         working-directory: ui
       - id: 'auth'
         uses: 'google-github-actions/auth@v0'
