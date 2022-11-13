@@ -1,3 +1,2 @@
-# YAML file used for GCP
 runtime: aspnetcore
 env: flex
