@@ -4,7 +4,7 @@ A sandbox for me to experiment working with GCP, including infrastructure with T
 ## Locations:
 
 * API: http://gcp.dfar.io
-* UI: TBD
+* UI: https://gcp-sandbox-368017.uc.r.appspot.com/
 
 ## Getting Started
 
