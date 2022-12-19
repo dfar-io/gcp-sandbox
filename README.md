@@ -46,6 +46,10 @@ To start the UI, go to the `ui` folder and run `ng serve`
 
 _(this isn't working yet, I think it has to do with port forwarding)_
 
+## Thoughts
+
+Initially started with hosting the UI in a Storage Bucket, but running into issues is going to require deploying both API and UI to Google App Engine.
+
 ## Troubleshooting
 
 ### Cannot use `terraform init`
