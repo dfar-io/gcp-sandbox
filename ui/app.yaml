@@ -17,4 +17,5 @@ skip_files:
   - ^(.*/)?.*\.md$
   - ^(.*/)?.*\.yaml$
   - ^LICENSE
-
+manual_scaling:
+  instances: 1
