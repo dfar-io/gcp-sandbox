@@ -52,3 +52,11 @@ jobs:
         with:
           working_directory: ui
           deliverables: app.yaml dispatch.yaml
+      - uses: nick-fields/retry@v2
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          shell: pwsh
+          command: gcloud app deploy --quiet app.yaml dispatch.yaml --promote
+          working_directory: ui
+      
