@@ -1,6 +1,6 @@
 runtime: python27
-api_version: 1
 threadsafe: true
+service: default
 handlers:
   - url: /
     static_files: dist/gcp-sandbox-ui/index.html
