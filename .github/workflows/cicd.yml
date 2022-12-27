@@ -30,7 +30,6 @@ jobs:
           working_directory: api/bin/Release/net6.0/publish
   ui:
     runs-on: ubuntu-latest
-    needs: api
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
