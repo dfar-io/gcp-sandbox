@@ -5,7 +5,7 @@ handlers:
   - url: /
     static_files: index.html
     upload: index.html
-  - url: /(.*)
+  - url: /
     static_dir: /.*
 manual_scaling:
   instances: 1
