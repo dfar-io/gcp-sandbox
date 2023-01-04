@@ -41,6 +41,9 @@ jobs:
       - name: Build
         run: npm run ng build
         working-directory: ui
+      - name: Move app.yaml file
+        run: cp app.yaml dist/gcp-sandbox-ui/app.yaml
+        working-directory: ui
       - name: Authenticate to Google Cloud
         if: github.event_name == 'push'
         uses: 'google-github-actions/auth@v1'
@@ -50,5 +53,5 @@ jobs:
         if: github.event_name == 'push'
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
-          working_directory: ui
+          working_directory: ui/dist/gcp-sandbox
       
