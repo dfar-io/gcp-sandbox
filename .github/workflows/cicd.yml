@@ -45,12 +45,12 @@ jobs:
         run: cp app.yaml dist/app.yaml
         working-directory: ui
       - name: Authenticate to Google Cloud
-        #if: github.event_name == 'push'
+        if: github.event_name == 'push'
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_JSON }}
       - name: Upload to App Engine
-        #if: github.event_name == 'push'
+        if: github.event_name == 'push'
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
           working_directory: ui/dist
