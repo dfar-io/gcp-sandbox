@@ -53,5 +53,5 @@ jobs:
         if: github.event_name == 'push'
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
-          working_directory: ui/dist/gcp-sandbox
+          working_directory: ui/dist/gcp-sandbox-ui
       
