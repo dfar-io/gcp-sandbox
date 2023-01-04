@@ -3,10 +3,10 @@ threadsafe: true
 service: default
 handlers:
   - url: /
-    static_files: index.html
-    upload: index.html
+    static_files: dist/gcp-sandbox-ui/index.html
+    upload: dist/gcp-sandbox-ui/index.html
   - url: /
-    static_dir: /
+    static_dir: dist/gcp-sandbox-ui
 skip_files:
   - e2e/
   - node_modules/
