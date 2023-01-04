@@ -28,6 +28,11 @@ jobs:
         uses: 'google-github-actions/deploy-appengine@v0'
         with:
           working_directory: api/bin/Release/net6.0/publish
+      - name: Upload to App Engine
+        #if: github.event_name == 'push'
+        uses: 'google-github-actions/deploy-appengine@v0'
+        with:
+          deliverables: dispatch.yaml
   ui:
     runs-on: ubuntu-latest
     steps:
